@@ -1,0 +1,65 @@
+{
+	"info": {
+		"_postman_id": "82422c0c-e6d0-4556-a890-0a6dadbb0bce",
+		"name": "Vehicle Booking",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21442686"
+	},
+	"item": [
+		{
+			"name": "getVehiclesByWheels",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/vehicles?wheels=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"vehicles"
+					],
+					"query": [
+						{
+							"key": "wheels",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createBooking",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"first_Name\": \"dfg\",\r\n    \"last_Name\": \"dfg\",\r\n    \"wheels\": \"4\",\r\n    \"vehicle_type\": \"Sedan\",\r\n    \"model\": \"2024\",\r\n    \"startDate\": \"2024-09-09\",\r\n    \"endDate\": \"2024-09-011\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/bookings",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"bookings"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
